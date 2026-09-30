@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>IT Support Tickets</title></head>
+<body>
+<h1>IT Support Ticket System</h1>
+<a href="/create">Create Ticket</a>
+<table border="1">
+<tr><th>ID</th><th>Title</th><th>Priority</th><th>Status</th><th>Actions</th></tr>
+{% for t in tickets %}
+<tr>
+<td>{{ t[0] }}</td>
+<td>{{ t[1] }}</td>
+<td>{{ t[3] }}</td>
+<td>{{ t[4] }}</td>
+<td>
+<form method="post" action="/update/{{ t[0] }}">
+<select name="status">
+<option>Open</option>
+<option>In Progress</option>
+<option>Resolved</option>
+<option>Closed</option>
+</select>
+<button type="submit">Update</button>
+</form>
+</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
