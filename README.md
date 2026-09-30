@@ -23,8 +23,7 @@ python app.py
 ```
 Open http://localhost:5000
 
-## Why this project
-Maps to my experience at Local Web and Barrister Global Services: responding to customer questions via chat/email/phone, onboarding support, and advocating for customers.
+## 
 
 ## License
 MIT
